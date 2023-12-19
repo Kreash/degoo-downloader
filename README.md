@@ -1,27 +1,22 @@
 # DegooDownloader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+This project was made to make it easier to download files from the degoo cloud storage.
 
-## Development server
+## How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Download the project
+2. Install the dependencies with `npm ci` (install node.js if you don't have it)
+3. Run the project with `npm start-prod`
+4. Open the browser without CORS and go to `localhost:4200`
+5. Login to your degoo account on official website
+6. Find **refreshToken** in the browser cookies and write it to the **refreshToken** field in the application
 
-## Code scaffolding
+You can track the download process in the developer tools
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How open browser without CORS
 
-## Build
+There are many articles on the Internet on this topic. Here is one of them https://medium.com/@beligh.hamdi/run-chrome-browser-without-cors-872747142c61.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Contributing
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pull requests are welcome.
