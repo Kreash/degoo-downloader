@@ -1,0 +1,21 @@
+@if (!rootFolders.length) {
+  <div>loading</div>
+}
+
+<div class="folders">
+  @if (openedFolder) {
+    <div class="folder-wrapper">
+      <app-opened-folder [folder]="openedFolder" (openFolder)="openFolder($event)" (goBackOut)="goBackOut($event)" />
+    </div>
+  } @else {
+    @for (folder of rootFolders; track folder.ID) {
+      <app-folder [folder]="folder" openedFolder (openFolder)="openFolder($event)" />
+    }
+  }
+</div>
+
+@if (isDownloadingErrors) {
+  <div class="reload-container">
+    <p-button label="Reload files with error" (click)="downloadErrors()"></p-button>
+  </div>
+}

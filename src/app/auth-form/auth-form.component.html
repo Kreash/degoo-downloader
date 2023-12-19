@@ -1,0 +1,12 @@
+<div class="auth-form-wrapper">
+  <input
+    placeholder="refresh token"
+    type="text"
+    pInputText
+    [(ngModel)]="refreshToken"
+  />
+  <p-button
+    label="Update refresh token"
+    (click)="saveRefreshToken()"
+  ></p-button>
+</div>

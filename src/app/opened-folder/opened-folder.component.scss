@@ -1,0 +1,52 @@
+.controls {
+  :not(:last-child) {
+    margin-right: 8px;
+  }
+  margin-bottom: 16px;
+}
+
+.folder-name {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.file-image-wrapper {
+  width: 140px;
+}
+
+.file {
+  max-height: 100px;
+  height: 100px;
+
+  display: flex;
+  gap: 16px;
+}
+
+.file-image {
+  height: 100%;
+}
+
+.files-wrapper {
+  :not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.download-file-name {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  span {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+:host ::ng-deep {
+  .p-scroller,
+  .p-scroller-content {
+    color: var(--nord6);
+    background-color: var(--nord3);
+  }
+
+}

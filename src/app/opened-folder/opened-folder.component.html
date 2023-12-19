@@ -1,0 +1,54 @@
+<div class="controls">
+  <p-button icon="pi pi-times" [rounded]="true" (click)="back()"></p-button>
+  <span class="folder-name">{{ folder.Name }}</span>
+
+  <p-button label="Download All files" (click)="downloadAllFiles()"></p-button>
+</div>
+<div class="download-file-name">
+  <span>Start downloading from a file named</span>
+  <input
+    placeholder="file name"
+    type="text"
+    pInputText
+    [(ngModel)]="downloadFromFile"
+  />
+</div>
+
+<div class="files-list">
+  <div class="files-list-title">Files list</div>
+
+  @if (!files.length) { loading... } @else {
+    <div class="files-wrapper">
+
+      <p-virtualScroller [value]="files" scrollHeight="calc(100vh - 330px)" [itemSize]="140">
+        <ng-template pTemplate="item" let-file>
+          @if (fileIsFolder(file)) {
+            <app-folder [folder]="file" (openFolder)="openFolderEmit($event)" />
+          } @else {
+
+
+            <ng-container
+              *ngTemplateOutlet="fileTemplate; context: { file: file }"
+            ></ng-container>
+          }
+        </ng-template>
+      </p-virtualScroller>
+    </div>
+  }
+</div>
+
+<ng-template #fileTemplate let-file="file">
+  <div class="file">
+    <div class="file-image-wrapper">
+      <img class="file-image" [src]="file.ThumbnailURL" alt="" />
+    </div>
+
+    <span class="file-date">
+      {{ file.CreationTime | date : "dd MMM yyyy, HH:mm" }}
+    </span>
+
+    <span class="file-name">
+      {{ file.Name }}
+    </span>
+  </div>
+</ng-template>

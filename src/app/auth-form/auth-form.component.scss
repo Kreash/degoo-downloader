@@ -1,0 +1,9 @@
+.auth-form-wrapper {
+  display: flex;
+}
+
+input {
+  flex-grow: 1;
+  width: max-content;
+  margin-right: 16px;
+}

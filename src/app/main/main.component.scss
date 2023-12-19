@@ -1,0 +1,25 @@
+.folder-name {
+  margin-bottom: 16px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+    margin-right: 16px;
+  }
+}
+
+.reload-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--nord4);
+}
+
+:host ::ng-deep {
+  .reload-container button {
+    width: 100%;
+  }
+}
