@@ -2,6 +2,8 @@
 
 This project was made to make it easier to download files from the degoo cloud storage.
 
+If you need more features for working with cloud degoo  storage or if you want answers to why this project was created, then the following repository explains it in some detail https://github.com/bernd-wechner/Degoo
+
 ## How to use
 
 1. Download the project
